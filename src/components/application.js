@@ -11,7 +11,7 @@ import Detail from './detail'
 class Application extends Component {
   constructor(props) {
     super(props);
-    this.state = {videos: [], selectedVideo: null};
+    this.state = {selectedVideo: null};
   }
 
   componentDidMount() {
@@ -26,8 +26,11 @@ class Application extends Component {
     this.setState({selectedVideo})
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({selectedVideo: nextProps.selectedVideo});
+  }
+
   render() {
-    const selectedVideo = this.state.selectedVideo || this.props.selectedVideo;
     return (
       <div className="container-fluid">
         <div className="row">
@@ -37,7 +40,7 @@ class Application extends Component {
         </div>
         <div className="row">
           <div className="col-md-8">
-            <Detail video={selectedVideo} />
+            <Detail video={this.state.selectedVideo} />
           </div>
           <div className=".col-md-4">
             <List
