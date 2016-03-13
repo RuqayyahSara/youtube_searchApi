@@ -1,8 +1,6 @@
-# Redux Simple Project
+# React & Redux: Simple Project
 
-Simple project using React and Redux Middleware
-
-Using Youtube Search API.
+Using React and Redux Middleware
 
 ####Git#####
 Checkout this repo, install dependencies, then start the gulp process with the following:
