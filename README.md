@@ -3,7 +3,7 @@
 Using React and Redux Middleware
 
 ####Git#####
-Checkout this repo, install dependencies, then start the gulp process with the following:
+Checkout this repo, install dependencies, then start the webpack-dev server with the following:
 
 ```
 	> git clone git@github.com:jamalsoueidan/react-redux-youtube-search-api.git
