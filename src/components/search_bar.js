@@ -4,11 +4,11 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="input-group">
-        <input type="text" className="form-control" ref="search"/>
-        <span className="input-group-btn">
-          <button className="btn btn-default" type="button" onClick={(event) => this.props.onSearchTerm(this.refs.search.value)}>Go!</button>
-        </span>
+        <img src="https://i.ytimg.com/vi/T7TJH5MF74s/maxresdefault.jpg"  height="100px"></img>
+        <input  placeholder="Search" type="text" className="input" ref="search" ></input>
+          <button  className="w3-button w3-white w3-border w3-border-red" type="button" onClick={(event) => this.props.onSearchTerm(this.refs.search.value)}> <i className="fa fa-search"></i> </button>
       </div>
+      
     )
   }
 }

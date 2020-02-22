@@ -1,15 +1,20 @@
 import React from 'react'
 import Item from './item'
 
-const List = (props) => {
-  return (
-    <ul className="media-list">
-      {props.videos.map((video) => {
-        return <Item onVideoSelect={props.onVideoSelect} video={video} key={video.etag} />
-      })}
-    </ul>
-  )
+const List = (props)=>{
+  const videoItems = props.videos.map((video)=>{
+      return (
+      <Item 
+      onVideoSelect={props.onVideoSelect}
+      key={video.etag} video={video} />
+      )
+  });
+
+  return(
+     <ul className="media-list"> 
+          {videoItems}
+     </ul>
+   )
 }
 
-
-export default List
+export default List;

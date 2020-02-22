@@ -1,11 +1,8 @@
-import { combineReducers } from 'redux';
+import {combineReducers} from "redux";
+import videos from "./youTubeReducers";
 
-function videos(state = [], action) {
-  if (action.type === "fetch") {
-    return action.payload.data.items;
-  }
-  return state;
-}
+const rootReducer = combineReducers({
+    videos
+})
 
-const reducers = combineReducers({videos: videos})
-export default reducers;
+export default rootReducer;
